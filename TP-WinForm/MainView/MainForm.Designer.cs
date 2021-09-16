@@ -29,85 +29,95 @@ namespace Dominio
         /// </summary>
         private void InitializeComponent()
         {
-            this.tabMainForm = new System.Windows.Forms.TabControl();
-            this.tabArticulos = new System.Windows.Forms.TabPage();
-            this.btnBuscarArticulo = new System.Windows.Forms.Button();
-            this.btnEliminarArticulo = new System.Windows.Forms.Button();
-            this.btnEditarArticulo = new System.Windows.Forms.Button();
-            this.btnNuevoArticulo = new System.Windows.Forms.Button();
+            this.tabArticulos = new System.Windows.Forms.TabControl();
+            this.Articulos = new System.Windows.Forms.TabPage();
+            this.Marcas = new System.Windows.Forms.TabPage();
+            this.Catalogos = new System.Windows.Forms.TabPage();
             this.dgvArticulos = new System.Windows.Forms.DataGridView();
-            this.tabCatalogos = new System.Windows.Forms.TabPage();
+            this.btnNuevoArticulo = new System.Windows.Forms.Button();
+            this.btnEditarArticulo = new System.Windows.Forms.Button();
+            this.btnEliminarArticulo = new System.Windows.Forms.Button();
+            this.btnBuscarArticulo = new System.Windows.Forms.Button();
             this.btnEliminarCatalogo = new System.Windows.Forms.Button();
             this.btnEditarCatalogo = new System.Windows.Forms.Button();
             this.btnNuevoCatalogo = new System.Windows.Forms.Button();
             this.dtvCatalogo = new System.Windows.Forms.DataGridView();
-            this.tabMarcas = new System.Windows.Forms.TabPage();
             this.btnEliminarMarca = new System.Windows.Forms.Button();
             this.btnEditarMarca = new System.Windows.Forms.Button();
             this.btnNuevaMarca = new System.Windows.Forms.Button();
             this.dgvMarcas = new System.Windows.Forms.DataGridView();
-            this.tabMainForm.SuspendLayout();
             this.tabArticulos.SuspendLayout();
+            this.Articulos.SuspendLayout();
+            this.Marcas.SuspendLayout();
+            this.Catalogos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).BeginInit();
-            this.tabCatalogos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtvCatalogo)).BeginInit();
-            this.tabMarcas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMarcas)).BeginInit();
             this.SuspendLayout();
             // 
-            // tabMainForm
-            // 
-            this.tabMainForm.Controls.Add(this.tabArticulos);
-            this.tabMainForm.Controls.Add(this.tabCatalogos);
-            this.tabMainForm.Controls.Add(this.tabMarcas);
-            this.tabMainForm.Location = new System.Drawing.Point(3, 2);
-            this.tabMainForm.Name = "tabMainForm";
-            this.tabMainForm.SelectedIndex = 0;
-            this.tabMainForm.Size = new System.Drawing.Size(561, 331);
-            this.tabMainForm.TabIndex = 0;
-            // 
             // tabArticulos
             // 
-            this.tabArticulos.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.tabArticulos.Controls.Add(this.btnBuscarArticulo);
-            this.tabArticulos.Controls.Add(this.btnEliminarArticulo);
-            this.tabArticulos.Controls.Add(this.btnEditarArticulo);
-            this.tabArticulos.Controls.Add(this.btnNuevoArticulo);
-            this.tabArticulos.Controls.Add(this.dgvArticulos);
-            this.tabArticulos.Location = new System.Drawing.Point(4, 22);
+            this.tabArticulos.Controls.Add(this.Articulos);
+            this.tabArticulos.Controls.Add(this.Catalogos);
+            this.tabArticulos.Controls.Add(this.Marcas);
+            this.tabArticulos.Location = new System.Drawing.Point(3, 2);
             this.tabArticulos.Name = "tabArticulos";
-            this.tabArticulos.Padding = new System.Windows.Forms.Padding(3);
-            this.tabArticulos.Size = new System.Drawing.Size(553, 305);
+            this.tabArticulos.SelectedIndex = 0;
+            this.tabArticulos.Size = new System.Drawing.Size(561, 331);
             this.tabArticulos.TabIndex = 0;
-            this.tabArticulos.Text = "Articulos";
-            this.tabArticulos.UseVisualStyleBackColor = true;
             // 
-            // btnBuscarArticulo
+            // Articulos
             // 
-            this.btnBuscarArticulo.Location = new System.Drawing.Point(453, 6);
-            this.btnBuscarArticulo.Name = "btnBuscarArticulo";
-            this.btnBuscarArticulo.Size = new System.Drawing.Size(90, 23);
-            this.btnBuscarArticulo.TabIndex = 4;
-            this.btnBuscarArticulo.Text = "Buscar Articulo";
-            this.btnBuscarArticulo.UseVisualStyleBackColor = true;
+            this.Articulos.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.Articulos.Controls.Add(this.btnBuscarArticulo);
+            this.Articulos.Controls.Add(this.btnEliminarArticulo);
+            this.Articulos.Controls.Add(this.btnEditarArticulo);
+            this.Articulos.Controls.Add(this.btnNuevoArticulo);
+            this.Articulos.Controls.Add(this.dgvArticulos);
+            this.Articulos.Location = new System.Drawing.Point(4, 22);
+            this.Articulos.Name = "Articulos";
+            this.Articulos.Padding = new System.Windows.Forms.Padding(3);
+            this.Articulos.Size = new System.Drawing.Size(553, 305);
+            this.Articulos.TabIndex = 0;
+            this.Articulos.Text = "Articulos";
+            this.Articulos.UseVisualStyleBackColor = true;
             // 
-            // btnEliminarArticulo
+            // Marcas
             // 
-            this.btnEliminarArticulo.Location = new System.Drawing.Point(191, 6);
-            this.btnEliminarArticulo.Name = "btnEliminarArticulo";
-            this.btnEliminarArticulo.Size = new System.Drawing.Size(96, 23);
-            this.btnEliminarArticulo.TabIndex = 3;
-            this.btnEliminarArticulo.Text = "Eliminar Articulo";
-            this.btnEliminarArticulo.UseVisualStyleBackColor = true;
+            this.Marcas.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.Marcas.Controls.Add(this.btnEliminarMarca);
+            this.Marcas.Controls.Add(this.btnEditarMarca);
+            this.Marcas.Controls.Add(this.btnNuevaMarca);
+            this.Marcas.Controls.Add(this.dgvMarcas);
+            this.Marcas.Location = new System.Drawing.Point(4, 22);
+            this.Marcas.Name = "Marcas";
+            this.Marcas.Padding = new System.Windows.Forms.Padding(3);
+            this.Marcas.Size = new System.Drawing.Size(553, 305);
+            this.Marcas.TabIndex = 1;
+            this.Marcas.Text = "Marcas";
+            this.Marcas.UseVisualStyleBackColor = true;
             // 
-            // btnEditarArticulo
+            // Catalogos
             // 
-            this.btnEditarArticulo.Location = new System.Drawing.Point(100, 6);
-            this.btnEditarArticulo.Name = "btnEditarArticulo";
-            this.btnEditarArticulo.Size = new System.Drawing.Size(85, 23);
-            this.btnEditarArticulo.TabIndex = 2;
-            this.btnEditarArticulo.Text = "Editar Articulo";
-            this.btnEditarArticulo.UseVisualStyleBackColor = true;
+            this.Catalogos.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.Catalogos.Controls.Add(this.btnEliminarCatalogo);
+            this.Catalogos.Controls.Add(this.btnEditarCatalogo);
+            this.Catalogos.Controls.Add(this.btnNuevoCatalogo);
+            this.Catalogos.Controls.Add(this.dtvCatalogo);
+            this.Catalogos.Location = new System.Drawing.Point(4, 22);
+            this.Catalogos.Name = "Catalogos";
+            this.Catalogos.Size = new System.Drawing.Size(553, 305);
+            this.Catalogos.TabIndex = 2;
+            this.Catalogos.Text = "Catalogos";
+            this.Catalogos.UseVisualStyleBackColor = true;
+            // 
+            // dgvArticulos
+            // 
+            this.dgvArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvArticulos.Location = new System.Drawing.Point(3, 39);
+            this.dgvArticulos.Name = "dgvArticulos";
+            this.dgvArticulos.Size = new System.Drawing.Size(544, 256);
+            this.dgvArticulos.TabIndex = 0;
             // 
             // btnNuevoArticulo
             // 
@@ -118,27 +128,32 @@ namespace Dominio
             this.btnNuevoArticulo.Text = "Nuevo Articulo";
             this.btnNuevoArticulo.UseVisualStyleBackColor = true;
             // 
-            // dgvArticulos
+            // btnEditarArticulo
             // 
-            this.dgvArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvArticulos.Location = new System.Drawing.Point(3, 39);
-            this.dgvArticulos.Name = "dgvArticulos";
-            this.dgvArticulos.Size = new System.Drawing.Size(544, 256);
-            this.dgvArticulos.TabIndex = 0;
+            this.btnEditarArticulo.Location = new System.Drawing.Point(100, 6);
+            this.btnEditarArticulo.Name = "btnEditarArticulo";
+            this.btnEditarArticulo.Size = new System.Drawing.Size(85, 23);
+            this.btnEditarArticulo.TabIndex = 2;
+            this.btnEditarArticulo.Text = "Editar Articulo";
+            this.btnEditarArticulo.UseVisualStyleBackColor = true;
             // 
-            // tabCatalogos
+            // btnEliminarArticulo
             // 
-            this.tabCatalogos.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.tabCatalogos.Controls.Add(this.btnEliminarCatalogo);
-            this.tabCatalogos.Controls.Add(this.btnEditarCatalogo);
-            this.tabCatalogos.Controls.Add(this.btnNuevoCatalogo);
-            this.tabCatalogos.Controls.Add(this.dtvCatalogo);
-            this.tabCatalogos.Location = new System.Drawing.Point(4, 22);
-            this.tabCatalogos.Name = "tabCatalogos";
-            this.tabCatalogos.Size = new System.Drawing.Size(553, 305);
-            this.tabCatalogos.TabIndex = 2;
-            this.tabCatalogos.Text = "Catalogos";
-            this.tabCatalogos.UseVisualStyleBackColor = true;
+            this.btnEliminarArticulo.Location = new System.Drawing.Point(191, 6);
+            this.btnEliminarArticulo.Name = "btnEliminarArticulo";
+            this.btnEliminarArticulo.Size = new System.Drawing.Size(96, 23);
+            this.btnEliminarArticulo.TabIndex = 3;
+            this.btnEliminarArticulo.Text = "Eliminar Articulo";
+            this.btnEliminarArticulo.UseVisualStyleBackColor = true;
+            // 
+            // btnBuscarArticulo
+            // 
+            this.btnBuscarArticulo.Location = new System.Drawing.Point(453, 6);
+            this.btnBuscarArticulo.Name = "btnBuscarArticulo";
+            this.btnBuscarArticulo.Size = new System.Drawing.Size(90, 23);
+            this.btnBuscarArticulo.TabIndex = 4;
+            this.btnBuscarArticulo.Text = "Buscar Articulo";
+            this.btnBuscarArticulo.UseVisualStyleBackColor = true;
             // 
             // btnEliminarCatalogo
             // 
@@ -178,21 +193,6 @@ namespace Dominio
             this.dtvCatalogo.Size = new System.Drawing.Size(544, 256);
             this.dtvCatalogo.TabIndex = 4;
             this.dtvCatalogo.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // tabMarcas
-            // 
-            this.tabMarcas.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.tabMarcas.Controls.Add(this.btnEliminarMarca);
-            this.tabMarcas.Controls.Add(this.btnEditarMarca);
-            this.tabMarcas.Controls.Add(this.btnNuevaMarca);
-            this.tabMarcas.Controls.Add(this.dgvMarcas);
-            this.tabMarcas.Location = new System.Drawing.Point(4, 22);
-            this.tabMarcas.Name = "tabMarcas";
-            this.tabMarcas.Padding = new System.Windows.Forms.Padding(3);
-            this.tabMarcas.Size = new System.Drawing.Size(553, 305);
-            this.tabMarcas.TabIndex = 1;
-            this.tabMarcas.Text = "Marcas";
-            this.tabMarcas.UseVisualStyleBackColor = true;
             // 
             // btnEliminarMarca
             // 
@@ -234,15 +234,15 @@ namespace Dominio
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(568, 340);
-            this.Controls.Add(this.tabMainForm);
+            this.Controls.Add(this.tabArticulos);
             this.Name = "mainForm";
             this.Text = "TP-WinForm";
-            this.tabMainForm.ResumeLayout(false);
             this.tabArticulos.ResumeLayout(false);
+            this.Articulos.ResumeLayout(false);
+            this.Marcas.ResumeLayout(false);
+            this.Catalogos.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).EndInit();
-            this.tabCatalogos.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dtvCatalogo)).EndInit();
-            this.tabMarcas.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvMarcas)).EndInit();
             this.ResumeLayout(false);
 
@@ -250,10 +250,10 @@ namespace Dominio
 
         #endregion
 
-        private System.Windows.Forms.TabControl tabMainForm;
-        private System.Windows.Forms.TabPage tabArticulos;
-        private System.Windows.Forms.TabPage tabMarcas;
-        private System.Windows.Forms.TabPage tabCatalogos;
+        private System.Windows.Forms.TabControl tabArticulos;
+        private System.Windows.Forms.TabPage Articulos;
+        private System.Windows.Forms.TabPage Marcas;
+        private System.Windows.Forms.TabPage Catalogos;
         private System.Windows.Forms.Button btnBuscarArticulo;
         private System.Windows.Forms.Button btnEliminarArticulo;
         private System.Windows.Forms.Button btnEditarArticulo;
