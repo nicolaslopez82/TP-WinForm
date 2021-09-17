@@ -28,255 +28,277 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabControl = new System.Windows.Forms.TabControl();
             this.tabArticulos = new System.Windows.Forms.TabPage();
-            this.TabCatalagos = new System.Windows.Forms.TabPage();
-            this.TabMarcas = new System.Windows.Forms.TabPage();
-            this.dgvArticulos = new System.Windows.Forms.DataGridView();
-            this.btnNuevoAr = new System.Windows.Forms.Button();
-            this.btnEditar = new System.Windows.Forms.Button();
-            this.btnEliminar = new System.Windows.Forms.Button();
-            this.btnBuscador = new System.Windows.Forms.Button();
             this.picArticulo = new System.Windows.Forms.PictureBox();
-            this.btNuevoCat = new System.Windows.Forms.Button();
-            this.btnEditarCat = new System.Windows.Forms.Button();
-            this.btnEliminarCat = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.btnNuevaMar = new System.Windows.Forms.Button();
-            this.btnEditarMar = new System.Windows.Forms.Button();
-            this.btnEliminarMar = new System.Windows.Forms.Button();
-            this.tabControl1.SuspendLayout();
+            this.btnBuscadorArticulo = new System.Windows.Forms.Button();
+            this.btnEliminarArticulo = new System.Windows.Forms.Button();
+            this.btnEditarArticulo = new System.Windows.Forms.Button();
+            this.btnNuevoArticulo = new System.Windows.Forms.Button();
+            this.dgvArticulos = new System.Windows.Forms.DataGridView();
+            this.tabCatalagos = new System.Windows.Forms.TabPage();
+            this.dgvCatalogos = new System.Windows.Forms.DataGridView();
+            this.btnEliminarCatalogo = new System.Windows.Forms.Button();
+            this.btnEditarCatalogo = new System.Windows.Forms.Button();
+            this.btNuevoCatalogo = new System.Windows.Forms.Button();
+            this.tabMarcas = new System.Windows.Forms.TabPage();
+            this.btnEliminarMarca = new System.Windows.Forms.Button();
+            this.btnEditarMarca = new System.Windows.Forms.Button();
+            this.btnNuevaMarca = new System.Windows.Forms.Button();
+            this.dgvMarcas = new System.Windows.Forms.DataGridView();
+            this.tabControl.SuspendLayout();
             this.tabArticulos.SuspendLayout();
-            this.TabCatalagos.SuspendLayout();
-            this.TabMarcas.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picArticulo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).BeginInit();
+            this.tabCatalagos.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCatalogos)).BeginInit();
+            this.tabMarcas.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMarcas)).BeginInit();
             this.SuspendLayout();
             // 
-            // tabControl1
+            // tabControl
             // 
-            this.tabControl1.Controls.Add(this.tabArticulos);
-            this.tabControl1.Controls.Add(this.TabCatalagos);
-            this.tabControl1.Controls.Add(this.TabMarcas);
-            this.tabControl1.Location = new System.Drawing.Point(12, 12);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(781, 379);
-            this.tabControl1.TabIndex = 0;
+            this.tabControl.Controls.Add(this.tabArticulos);
+            this.tabControl.Controls.Add(this.tabCatalagos);
+            this.tabControl.Controls.Add(this.tabMarcas);
+            this.tabControl.Location = new System.Drawing.Point(16, 15);
+            this.tabControl.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabControl.Name = "tabControl";
+            this.tabControl.SelectedIndex = 0;
+            this.tabControl.Size = new System.Drawing.Size(1041, 466);
+            this.tabControl.TabIndex = 0;
             // 
             // tabArticulos
             // 
             this.tabArticulos.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.tabArticulos.Controls.Add(this.picArticulo);
-            this.tabArticulos.Controls.Add(this.btnBuscador);
-            this.tabArticulos.Controls.Add(this.btnEliminar);
-            this.tabArticulos.Controls.Add(this.btnEditar);
-            this.tabArticulos.Controls.Add(this.btnNuevoAr);
+            this.tabArticulos.Controls.Add(this.btnBuscadorArticulo);
+            this.tabArticulos.Controls.Add(this.btnEliminarArticulo);
+            this.tabArticulos.Controls.Add(this.btnEditarArticulo);
+            this.tabArticulos.Controls.Add(this.btnNuevoArticulo);
             this.tabArticulos.Controls.Add(this.dgvArticulos);
-            this.tabArticulos.Location = new System.Drawing.Point(4, 22);
+            this.tabArticulos.Location = new System.Drawing.Point(4, 25);
+            this.tabArticulos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tabArticulos.Name = "tabArticulos";
-            this.tabArticulos.Padding = new System.Windows.Forms.Padding(3);
-            this.tabArticulos.Size = new System.Drawing.Size(773, 353);
+            this.tabArticulos.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabArticulos.Size = new System.Drawing.Size(1033, 437);
             this.tabArticulos.TabIndex = 0;
             this.tabArticulos.Text = "Articulos";
             this.tabArticulos.UseVisualStyleBackColor = true;
             // 
-            // TabCatalagos
-            // 
-            this.TabCatalagos.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.TabCatalagos.Controls.Add(this.dataGridView1);
-            this.TabCatalagos.Controls.Add(this.btnEliminarCat);
-            this.TabCatalagos.Controls.Add(this.btnEditarCat);
-            this.TabCatalagos.Controls.Add(this.btNuevoCat);
-            this.TabCatalagos.Location = new System.Drawing.Point(4, 22);
-            this.TabCatalagos.Name = "TabCatalagos";
-            this.TabCatalagos.Padding = new System.Windows.Forms.Padding(3);
-            this.TabCatalagos.Size = new System.Drawing.Size(773, 353);
-            this.TabCatalagos.TabIndex = 1;
-            this.TabCatalagos.Text = "Catalogos";
-            this.TabCatalagos.UseVisualStyleBackColor = true;
-            // 
-            // TabMarcas
-            // 
-            this.TabMarcas.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.TabMarcas.Controls.Add(this.btnEliminarMar);
-            this.TabMarcas.Controls.Add(this.btnEditarMar);
-            this.TabMarcas.Controls.Add(this.btnNuevaMar);
-            this.TabMarcas.Controls.Add(this.dataGridView2);
-            this.TabMarcas.Location = new System.Drawing.Point(4, 22);
-            this.TabMarcas.Name = "TabMarcas";
-            this.TabMarcas.Size = new System.Drawing.Size(773, 353);
-            this.TabMarcas.TabIndex = 2;
-            this.TabMarcas.Text = "Marcas";
-            this.TabMarcas.UseVisualStyleBackColor = true;
-            // 
-            // dgvArticulos
-            // 
-            this.dgvArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvArticulos.Location = new System.Drawing.Point(1, 45);
-            this.dgvArticulos.Name = "dgvArticulos";
-            this.dgvArticulos.Size = new System.Drawing.Size(517, 306);
-            this.dgvArticulos.TabIndex = 0;
-            // 
-            // btnNuevoAr
-            // 
-            this.btnNuevoAr.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnNuevoAr.Location = new System.Drawing.Point(6, 6);
-            this.btnNuevoAr.Name = "btnNuevoAr";
-            this.btnNuevoAr.Size = new System.Drawing.Size(113, 32);
-            this.btnNuevoAr.TabIndex = 1;
-            this.btnNuevoAr.Text = "Nuevo Articulo";
-            this.btnNuevoAr.UseVisualStyleBackColor = true;
-            // 
-            // btnEditar
-            // 
-            this.btnEditar.Location = new System.Drawing.Point(125, 6);
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(101, 32);
-            this.btnEditar.TabIndex = 2;
-            this.btnEditar.Text = "Editar Articulo";
-            this.btnEditar.UseVisualStyleBackColor = true;
-            // 
-            // btnEliminar
-            // 
-            this.btnEliminar.Location = new System.Drawing.Point(233, 6);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(100, 32);
-            this.btnEliminar.TabIndex = 3;
-            this.btnEliminar.Text = "Eliminar Articulo ";
-            this.btnEliminar.UseVisualStyleBackColor = true;
-            // 
-            // btnBuscador
-            // 
-            this.btnBuscador.Location = new System.Drawing.Point(646, 6);
-            this.btnBuscador.Name = "btnBuscador";
-            this.btnBuscador.Size = new System.Drawing.Size(107, 32);
-            this.btnBuscador.TabIndex = 4;
-            this.btnBuscador.Text = "Buscar Articulo";
-            this.btnBuscador.UseVisualStyleBackColor = true;
-            // 
             // picArticulo
             // 
-            this.picArticulo.Location = new System.Drawing.Point(543, 54);
+            this.picArticulo.Location = new System.Drawing.Point(724, 66);
+            this.picArticulo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.picArticulo.Name = "picArticulo";
-            this.picArticulo.Size = new System.Drawing.Size(201, 182);
+            this.picArticulo.Size = new System.Drawing.Size(268, 224);
             this.picArticulo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picArticulo.TabIndex = 5;
             this.picArticulo.TabStop = false;
             // 
-            // btNuevoCat
+            // btnBuscadorArticulo
             // 
-            this.btNuevoCat.Location = new System.Drawing.Point(18, 6);
-            this.btNuevoCat.Name = "btNuevoCat";
-            this.btNuevoCat.Size = new System.Drawing.Size(113, 32);
-            this.btNuevoCat.TabIndex = 0;
-            this.btNuevoCat.Text = "Nuevo Catalogo";
-            this.btNuevoCat.UseVisualStyleBackColor = true;
+            this.btnBuscadorArticulo.Location = new System.Drawing.Point(861, 16);
+            this.btnBuscadorArticulo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnBuscadorArticulo.Name = "btnBuscadorArticulo";
+            this.btnBuscadorArticulo.Size = new System.Drawing.Size(143, 39);
+            this.btnBuscadorArticulo.TabIndex = 4;
+            this.btnBuscadorArticulo.Text = "Buscar Articulo";
+            this.btnBuscadorArticulo.UseVisualStyleBackColor = true;
             // 
-            // btnEditarCat
+            // btnEliminarArticulo
             // 
-            this.btnEditarCat.Location = new System.Drawing.Point(137, 6);
-            this.btnEditarCat.Name = "btnEditarCat";
-            this.btnEditarCat.Size = new System.Drawing.Size(113, 32);
-            this.btnEditarCat.TabIndex = 1;
-            this.btnEditarCat.Text = "Editar Catalogo";
-            this.btnEditarCat.UseVisualStyleBackColor = true;
+            this.btnEliminarArticulo.Location = new System.Drawing.Point(311, 16);
+            this.btnEliminarArticulo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEliminarArticulo.Name = "btnEliminarArticulo";
+            this.btnEliminarArticulo.Size = new System.Drawing.Size(133, 39);
+            this.btnEliminarArticulo.TabIndex = 3;
+            this.btnEliminarArticulo.Text = "Eliminar Articulo ";
+            this.btnEliminarArticulo.UseVisualStyleBackColor = true;
             // 
-            // btnEliminarCat
+            // btnEditarArticulo
             // 
-            this.btnEliminarCat.Location = new System.Drawing.Point(256, 6);
-            this.btnEliminarCat.Name = "btnEliminarCat";
-            this.btnEliminarCat.Size = new System.Drawing.Size(113, 32);
-            this.btnEliminarCat.TabIndex = 2;
-            this.btnEliminarCat.Text = "Eliminar Catalogo";
-            this.btnEliminarCat.UseVisualStyleBackColor = true;
+            this.btnEditarArticulo.Location = new System.Drawing.Point(167, 16);
+            this.btnEditarArticulo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEditarArticulo.Name = "btnEditarArticulo";
+            this.btnEditarArticulo.Size = new System.Drawing.Size(135, 39);
+            this.btnEditarArticulo.TabIndex = 2;
+            this.btnEditarArticulo.Text = "Editar Articulo";
+            this.btnEditarArticulo.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // btnNuevoArticulo
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(18, 45);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(745, 298);
-            this.dataGridView1.TabIndex = 3;
+            this.btnNuevoArticulo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnNuevoArticulo.Location = new System.Drawing.Point(8, 16);
+            this.btnNuevoArticulo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnNuevoArticulo.Name = "btnNuevoArticulo";
+            this.btnNuevoArticulo.Size = new System.Drawing.Size(151, 39);
+            this.btnNuevoArticulo.TabIndex = 1;
+            this.btnNuevoArticulo.Text = "Nuevo Articulo";
+            this.btnNuevoArticulo.UseVisualStyleBackColor = true;
             // 
-            // dataGridView2
+            // dgvArticulos
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(12, 50);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(745, 298);
-            this.dataGridView2.TabIndex = 0;
+            this.dgvArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvArticulos.Location = new System.Drawing.Point(8, 64);
+            this.dgvArticulos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvArticulos.Name = "dgvArticulos";
+            this.dgvArticulos.RowHeadersWidth = 51;
+            this.dgvArticulos.Size = new System.Drawing.Size(689, 377);
+            this.dgvArticulos.TabIndex = 0;
             // 
-            // btnNuevaMar
+            // tabCatalagos
             // 
-            this.btnNuevaMar.Location = new System.Drawing.Point(12, 11);
-            this.btnNuevaMar.Name = "btnNuevaMar";
-            this.btnNuevaMar.Size = new System.Drawing.Size(113, 32);
-            this.btnNuevaMar.TabIndex = 1;
-            this.btnNuevaMar.Text = "Nueva Marca";
-            this.btnNuevaMar.UseVisualStyleBackColor = true;
+            this.tabCatalagos.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.tabCatalagos.Controls.Add(this.dgvCatalogos);
+            this.tabCatalagos.Controls.Add(this.btnEliminarCatalogo);
+            this.tabCatalagos.Controls.Add(this.btnEditarCatalogo);
+            this.tabCatalagos.Controls.Add(this.btNuevoCatalogo);
+            this.tabCatalagos.Location = new System.Drawing.Point(4, 25);
+            this.tabCatalagos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabCatalagos.Name = "tabCatalagos";
+            this.tabCatalagos.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabCatalagos.Size = new System.Drawing.Size(1033, 437);
+            this.tabCatalagos.TabIndex = 1;
+            this.tabCatalagos.Text = "Catalogos";
+            this.tabCatalagos.UseVisualStyleBackColor = true;
             // 
-            // btnEditarMar
+            // dgvCatalogos
             // 
-            this.btnEditarMar.Location = new System.Drawing.Point(131, 11);
-            this.btnEditarMar.Name = "btnEditarMar";
-            this.btnEditarMar.Size = new System.Drawing.Size(113, 32);
-            this.btnEditarMar.TabIndex = 2;
-            this.btnEditarMar.Text = "Editar Marca";
-            this.btnEditarMar.UseVisualStyleBackColor = true;
+            this.dgvCatalogos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCatalogos.Location = new System.Drawing.Point(18, 64);
+            this.dgvCatalogos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvCatalogos.Name = "dgvCatalogos";
+            this.dgvCatalogos.RowHeadersWidth = 51;
+            this.dgvCatalogos.Size = new System.Drawing.Size(993, 367);
+            this.dgvCatalogos.TabIndex = 3;
             // 
-            // btnEliminarMar
+            // btnEliminarCatalogo
             // 
-            this.btnEliminarMar.Location = new System.Drawing.Point(250, 11);
-            this.btnEliminarMar.Name = "btnEliminarMar";
-            this.btnEliminarMar.Size = new System.Drawing.Size(113, 32);
-            this.btnEliminarMar.TabIndex = 3;
-            this.btnEliminarMar.Text = "Eliminar marca";
-            this.btnEliminarMar.UseVisualStyleBackColor = true;
+            this.btnEliminarCatalogo.Location = new System.Drawing.Point(335, 16);
+            this.btnEliminarCatalogo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEliminarCatalogo.Name = "btnEliminarCatalogo";
+            this.btnEliminarCatalogo.Size = new System.Drawing.Size(151, 39);
+            this.btnEliminarCatalogo.TabIndex = 2;
+            this.btnEliminarCatalogo.Text = "Eliminar Catalogo";
+            this.btnEliminarCatalogo.UseVisualStyleBackColor = true;
+            // 
+            // btnEditarCatalogo
+            // 
+            this.btnEditarCatalogo.Location = new System.Drawing.Point(177, 16);
+            this.btnEditarCatalogo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEditarCatalogo.Name = "btnEditarCatalogo";
+            this.btnEditarCatalogo.Size = new System.Drawing.Size(151, 39);
+            this.btnEditarCatalogo.TabIndex = 1;
+            this.btnEditarCatalogo.Text = "Editar Catalogo";
+            this.btnEditarCatalogo.UseVisualStyleBackColor = true;
+            // 
+            // btNuevoCatalogo
+            // 
+            this.btNuevoCatalogo.Location = new System.Drawing.Point(18, 16);
+            this.btNuevoCatalogo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btNuevoCatalogo.Name = "btNuevoCatalogo";
+            this.btNuevoCatalogo.Size = new System.Drawing.Size(151, 39);
+            this.btNuevoCatalogo.TabIndex = 0;
+            this.btNuevoCatalogo.Text = "Nuevo Catalogo";
+            this.btNuevoCatalogo.UseVisualStyleBackColor = true;
+            // 
+            // tabMarcas
+            // 
+            this.tabMarcas.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.tabMarcas.Controls.Add(this.btnEliminarMarca);
+            this.tabMarcas.Controls.Add(this.btnEditarMarca);
+            this.tabMarcas.Controls.Add(this.btnNuevaMarca);
+            this.tabMarcas.Controls.Add(this.dgvMarcas);
+            this.tabMarcas.Location = new System.Drawing.Point(4, 25);
+            this.tabMarcas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabMarcas.Name = "tabMarcas";
+            this.tabMarcas.Size = new System.Drawing.Size(1033, 437);
+            this.tabMarcas.TabIndex = 2;
+            this.tabMarcas.Text = "Marcas";
+            this.tabMarcas.UseVisualStyleBackColor = true;
+            // 
+            // btnEliminarMarca
+            // 
+            this.btnEliminarMarca.Location = new System.Drawing.Point(333, 14);
+            this.btnEliminarMarca.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEliminarMarca.Name = "btnEliminarMarca";
+            this.btnEliminarMarca.Size = new System.Drawing.Size(151, 39);
+            this.btnEliminarMarca.TabIndex = 3;
+            this.btnEliminarMarca.Text = "Eliminar marca";
+            this.btnEliminarMarca.UseVisualStyleBackColor = true;
+            // 
+            // btnEditarMarca
+            // 
+            this.btnEditarMarca.Location = new System.Drawing.Point(175, 14);
+            this.btnEditarMarca.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEditarMarca.Name = "btnEditarMarca";
+            this.btnEditarMarca.Size = new System.Drawing.Size(151, 39);
+            this.btnEditarMarca.TabIndex = 2;
+            this.btnEditarMarca.Text = "Editar Marca";
+            this.btnEditarMarca.UseVisualStyleBackColor = true;
+            // 
+            // btnNuevaMarca
+            // 
+            this.btnNuevaMarca.Location = new System.Drawing.Point(16, 14);
+            this.btnNuevaMarca.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnNuevaMarca.Name = "btnNuevaMarca";
+            this.btnNuevaMarca.Size = new System.Drawing.Size(151, 39);
+            this.btnNuevaMarca.TabIndex = 1;
+            this.btnNuevaMarca.Text = "Nueva Marca";
+            this.btnNuevaMarca.UseVisualStyleBackColor = true;
+            // 
+            // dgvMarcas
+            // 
+            this.dgvMarcas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvMarcas.Location = new System.Drawing.Point(16, 64);
+            this.dgvMarcas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvMarcas.Name = "dgvMarcas";
+            this.dgvMarcas.RowHeadersWidth = 51;
+            this.dgvMarcas.Size = new System.Drawing.Size(993, 367);
+            this.dgvMarcas.TabIndex = 0;
             // 
             // mainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(796, 411);
-            this.Controls.Add(this.tabControl1);
+            this.ClientSize = new System.Drawing.Size(1061, 506);
+            this.Controls.Add(this.tabControl);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "mainForm";
             this.Text = "TP-WinForm";
-            this.tabControl1.ResumeLayout(false);
+            this.tabControl.ResumeLayout(false);
             this.tabArticulos.ResumeLayout(false);
-            this.TabCatalagos.ResumeLayout(false);
-            this.TabMarcas.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picArticulo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).EndInit();
+            this.tabCatalagos.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCatalogos)).EndInit();
+            this.tabMarcas.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMarcas)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabControl tabControl;
         private System.Windows.Forms.TabPage tabArticulos;
         private System.Windows.Forms.PictureBox picArticulo;
-        private System.Windows.Forms.Button btnBuscador;
-        private System.Windows.Forms.Button btnEliminar;
-        private System.Windows.Forms.Button btnEditar;
-        private System.Windows.Forms.Button btnNuevoAr;
+        private System.Windows.Forms.Button btnBuscadorArticulo;
+        private System.Windows.Forms.Button btnEliminarArticulo;
+        private System.Windows.Forms.Button btnEditarArticulo;
+        private System.Windows.Forms.Button btnNuevoArticulo;
         private System.Windows.Forms.DataGridView dgvArticulos;
-        private System.Windows.Forms.TabPage TabCatalagos;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button btnEliminarCat;
-        private System.Windows.Forms.Button btnEditarCat;
-        private System.Windows.Forms.Button btNuevoCat;
-        private System.Windows.Forms.TabPage TabMarcas;
-        private System.Windows.Forms.Button btnEliminarMar;
-        private System.Windows.Forms.Button btnEditarMar;
-        private System.Windows.Forms.Button btnNuevaMar;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.TabPage tabCatalagos;
+        private System.Windows.Forms.DataGridView dgvCatalogos;
+        private System.Windows.Forms.Button btnEliminarCatalogo;
+        private System.Windows.Forms.Button btnEditarCatalogo;
+        private System.Windows.Forms.Button btNuevoCatalogo;
+        private System.Windows.Forms.TabPage tabMarcas;
+        private System.Windows.Forms.Button btnEliminarMarca;
+        private System.Windows.Forms.Button btnEditarMarca;
+        private System.Windows.Forms.Button btnNuevaMarca;
+        private System.Windows.Forms.DataGridView dgvMarcas;
     }
 }
 
