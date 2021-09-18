@@ -7,11 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using dominio;
 
 namespace vista
 {
     public partial class mainForm : Form
     {
+        private List<Articulo> listArticulos;
         public mainForm()
         {
             InitializeComponent();
