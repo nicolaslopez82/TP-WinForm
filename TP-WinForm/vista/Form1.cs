@@ -13,7 +13,6 @@ namespace vista
 {
     public partial class mainForm : Form
     {
-        private List<Articulo> listArticulos;
         public mainForm()
         {
             InitializeComponent();

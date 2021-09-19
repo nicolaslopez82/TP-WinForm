@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "vista", "vista\vista.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dominio", "dominio\dominio.csproj", "{6997DBA6-07E0-4ED1-8920-92B48BDEB85A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConexionDataBase", "ConexionDataBase\ConexionDataBase.csproj", "{7A1F1F00-40BD-4A76-8181-7CEA4A9D85E4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "datasource", "ConexionDataBase\datasource.csproj", "{7A1F1F00-40BD-4A76-8181-7CEA4A9D85E4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
