@@ -42,7 +42,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AccesoDatos.cs" />
-    <Compile Include="ConexionDataBase.cs" />
     <Compile Include="ConstantesDB.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

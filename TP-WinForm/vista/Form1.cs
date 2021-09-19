@@ -60,6 +60,12 @@ namespace vista
             Articulo seleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
             cargarImagen(seleccionado.Imagen);
         }
-    
+
+        private void btnNuevoArticulo_Click(object sender, EventArgs e)
+        {
+            AltaArticulo alta = new AltaArticulo();
+            alta.ShowDialog();
+            cargar();
+        }
     }
 }

@@ -136,6 +136,7 @@
             this.btnNuevoArticulo.TabIndex = 1;
             this.btnNuevoArticulo.Text = "Nuevo Articulo";
             this.btnNuevoArticulo.UseVisualStyleBackColor = true;
+            this.btnNuevoArticulo.Click += new System.EventHandler(this.btnNuevoArticulo_Click);
             // 
             // dgvArticulos
             // 
