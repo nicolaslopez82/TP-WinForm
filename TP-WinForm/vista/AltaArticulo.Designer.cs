@@ -75,8 +75,7 @@
             this.LabelCod.Name = "LabelCod";
             this.LabelCod.Size = new System.Drawing.Size(43, 13);
             this.LabelCod.TabIndex = 2;
-            this.LabelCod.Text = "Codigo:";
-            this.LabelCod.Click += new System.EventHandler(this.label1_Click);
+            this.LabelCod.Text = "Codigo:";           
             // 
             // txtCodigo
             // 

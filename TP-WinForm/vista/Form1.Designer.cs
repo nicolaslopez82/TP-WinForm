@@ -88,7 +88,7 @@
             // 
             // picArticulo
             // 
-            this.picArticulo.Location = new System.Drawing.Point(1034, 64);
+            this.picArticulo.Location = new System.Drawing.Point(1045, 64);
             this.picArticulo.Margin = new System.Windows.Forms.Padding(4);
             this.picArticulo.Name = "picArticulo";
             this.picArticulo.Size = new System.Drawing.Size(309, 248);
@@ -145,7 +145,7 @@
             this.dgvArticulos.Margin = new System.Windows.Forms.Padding(4);
             this.dgvArticulos.Name = "dgvArticulos";
             this.dgvArticulos.RowHeadersWidth = 51;
-            this.dgvArticulos.Size = new System.Drawing.Size(996, 377);
+            this.dgvArticulos.Size = new System.Drawing.Size(1004, 377);
             this.dgvArticulos.TabIndex = 0;
             this.dgvArticulos.SelectionChanged += new System.EventHandler(this.dgvArticulos_SelectionChanged);
             // 

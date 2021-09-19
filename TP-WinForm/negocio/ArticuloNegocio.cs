@@ -16,12 +16,10 @@ namespace negocio
 
         public List<Articulo> listar()
          { 
-             List<Articulo> lista = new List<Articulo>();
-             SqlDataReader lector;
+             List<Articulo> lista = new List<Articulo>();             
 
              try
              {               
-
                 AccesoDatos.setearconsulta(ConstantesDB.SQL_QUERY_LISTAR_ARTICULOS.Value);
 
                  AccesoDatos.ejecutarLectura();
@@ -54,29 +52,27 @@ namespace negocio
         }
 
         public void agregar(Articulo nuevo)
-        {
-            AccesoDatos datos = new AccesoDatos();
+        {            
+            AccesoDatos.setearconsulta(ConstantesDB.SQL_QUERY_INSERTAR_ARTICULOS.Value);
 
             try
-            {
-                datos.setearconsulta("insert into ARTICULOS (Codigo,Nombre,Descripcion,IdMarca,IdCategoria,ImagenUrl,Precio) VALUES (@Codigo,@Nombre,@Descripcion,@IdMarca,@IdCategoria,@ImagenUrl,@Precio)");
-                datos.setearParametro("@Codigo", nuevo.Codigo);
-                datos.setearParametro("@Nombre", nuevo.Nombre);
-                datos.setearParametro("@Descripcion", nuevo.Descripcion);
-                datos.setearParametro("@IdMarca", nuevo.Marca.Id);
-                datos.setearParametro("@IdCategoria", nuevo.Categoria.Id);
-                datos.setearParametro("@ImagenUrl", nuevo.Imagen);
-                datos.setearParametro("@Precio", nuevo.Precio);
-                datos.ejecturarAccion();
+            {                
+                AccesoDatos.setearParametro("@Codigo", nuevo.Codigo);
+                AccesoDatos.setearParametro("@Nombre", nuevo.Nombre);
+                AccesoDatos.setearParametro("@Descripcion", nuevo.Descripcion);
+                AccesoDatos.setearParametro("@IdMarca", nuevo.Marca.Id);
+                AccesoDatos.setearParametro("@IdCategoria", nuevo.Categoria.Id);
+                AccesoDatos.setearParametro("@ImagenUrl", nuevo.Imagen);
+                AccesoDatos.setearParametro("@Precio", nuevo.Precio);
+                AccesoDatos.ejecturarAccion();
             }
             catch (Exception ex)
             {
-
                 throw ex;
             }
             finally
             {
-                datos.cerrarConexion();
+                AccesoDatos.cerrarConexion();
             }
         }
     }

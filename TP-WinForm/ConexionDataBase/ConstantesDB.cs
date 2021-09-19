@@ -31,6 +31,8 @@ namespace ConexionDataBase
                                             "FROM ARTICULOS a " +
                                                 "JOIN MARCAS m ON a.IdMarca = m.Id " +
                                                 "JOIN CATEGORIAS c ON a.IdCategoria = c.Id"); } }
-        public static ConstantesDB SQL_QUERY_INSERTAR_CATEGORIAS { get { return new ConstantesDB("Insert into CATEGORIAS (Id, Descripcion) values"); } }
+        public static ConstantesDB SQL_QUERY_INSERTAR_ARTICULOS { get { return new ConstantesDB(
+                                            "INSERT INTO ARTICULOS (Codigo, Nombre, Descripcion, IdMarca, IdCategoria, ImagenUrl, Precio) " +
+                                            "VALUES (@Codigo,@Nombre,@Descripcion,@IdMarca,@IdCategoria,@ImagenUrl,@Precio)"); } }
     }
 }
