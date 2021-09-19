@@ -16,12 +16,10 @@ namespace negocio
 
         public List<Articulo> listar()
          { 
-             List<Articulo> lista = new List<Articulo>();
-             SqlDataReader lector;
+             List<Articulo> lista = new List<Articulo>();             
 
              try
              {               
-
                 AccesoDatos.setearconsulta(ConstantesDB.SQL_QUERY_LISTAR_ARTICULOS.Value);
 
                  AccesoDatos.ejecutarLectura();
@@ -51,6 +49,31 @@ namespace negocio
              {
                 throw ex;
              }           
+        }
+
+        public void agregar(Articulo nuevo)
+        {            
+            AccesoDatos.setearconsulta(ConstantesDB.SQL_QUERY_INSERTAR_ARTICULOS.Value);
+
+            try
+            {                
+                AccesoDatos.setearParametro("@Codigo", nuevo.Codigo);
+                AccesoDatos.setearParametro("@Nombre", nuevo.Nombre);
+                AccesoDatos.setearParametro("@Descripcion", nuevo.Descripcion);
+                AccesoDatos.setearParametro("@IdMarca", nuevo.Marca.Id);
+                AccesoDatos.setearParametro("@IdCategoria", nuevo.Categoria.Id);
+                AccesoDatos.setearParametro("@ImagenUrl", nuevo.Imagen);
+                AccesoDatos.setearParametro("@Precio", nuevo.Precio);
+                AccesoDatos.ejecturarAccion();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                AccesoDatos.cerrarConexion();
+            }
         }
     }
 }

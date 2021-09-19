@@ -16,7 +16,8 @@ namespace ConexionDataBase
         public static ConstantesDB SQL_CONNECTION_CONEXION { get { return new ConstantesDB("server =.\\SQLEXPRESS; database = CATALOGO_DB; integrated security = true"); } }
         public static ConstantesDB SQL_QUERY_LISTAR_MARCAS { get { return new ConstantesDB("SELECT * FROM MARCAS"); } }
         public static ConstantesDB SQL_QUERY_LISTAR_CATEGORIAS { get { return new ConstantesDB("SELECT * FROM CATEGORIAS"); } }
-        public static ConstantesDB SQL_QUERY_LISTAR_ARTICULOS { get { return new ConstantesDB("SELECT " +
+        public static ConstantesDB SQL_QUERY_LISTAR_ARTICULOS { get { return new ConstantesDB(
+                                            "SELECT " +
                                                 "a.Id, " +
                                                 "a.Codigo, " +
                                                 "a.Nombre, " +
@@ -30,6 +31,8 @@ namespace ConexionDataBase
                                             "FROM ARTICULOS a " +
                                                 "JOIN MARCAS m ON a.IdMarca = m.Id " +
                                                 "JOIN CATEGORIAS c ON a.IdCategoria = c.Id"); } }
-        public static ConstantesDB SQL_QUERY_INSERTAR_CATEGORIAS { get { return new ConstantesDB("Insert into CATEGORIAS (Id, Descripcion) values"); } }
+        public static ConstantesDB SQL_QUERY_INSERTAR_ARTICULOS { get { return new ConstantesDB(
+                                            "INSERT INTO ARTICULOS (Codigo, Nombre, Descripcion, IdMarca, IdCategoria, ImagenUrl, Precio) " +
+                                            "VALUES (@Codigo,@Nombre,@Descripcion,@IdMarca,@IdCategoria,@ImagenUrl,@Precio)"); } }
     }
 }
