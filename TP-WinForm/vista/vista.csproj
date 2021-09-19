@@ -80,9 +80,17 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ConexionDataBase\ConexionDataBase.csproj">
+      <Project>{7a1f1f00-40bd-4a76-8181-7cea4a9d85e4}</Project>
+      <Name>ConexionDataBase</Name>
+    </ProjectReference>
     <ProjectReference Include="..\dominio\dominio.csproj">
       <Project>{6997dba6-07e0-4ed1-8920-92b48bdeb85a}</Project>
       <Name>dominio</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\negocio\negocio.csproj">
+      <Project>{703aed8f-1af4-4c05-a7cc-1cb0ffe92d94}</Project>
+      <Name>negocio</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

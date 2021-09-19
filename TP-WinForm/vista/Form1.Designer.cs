@@ -62,10 +62,10 @@
             this.tabControl.Controls.Add(this.tabCatalagos);
             this.tabControl.Controls.Add(this.tabMarcas);
             this.tabControl.Location = new System.Drawing.Point(16, 15);
-            this.tabControl.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabControl.Margin = new System.Windows.Forms.Padding(4);
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedIndex = 0;
-            this.tabControl.Size = new System.Drawing.Size(1041, 466);
+            this.tabControl.Size = new System.Drawing.Size(1433, 567);
             this.tabControl.TabIndex = 0;
             // 
             // tabArticulos
@@ -78,20 +78,20 @@
             this.tabArticulos.Controls.Add(this.btnNuevoArticulo);
             this.tabArticulos.Controls.Add(this.dgvArticulos);
             this.tabArticulos.Location = new System.Drawing.Point(4, 25);
-            this.tabArticulos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabArticulos.Margin = new System.Windows.Forms.Padding(4);
             this.tabArticulos.Name = "tabArticulos";
-            this.tabArticulos.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tabArticulos.Size = new System.Drawing.Size(1033, 437);
+            this.tabArticulos.Padding = new System.Windows.Forms.Padding(4);
+            this.tabArticulos.Size = new System.Drawing.Size(1425, 538);
             this.tabArticulos.TabIndex = 0;
             this.tabArticulos.Text = "Articulos";
             this.tabArticulos.UseVisualStyleBackColor = true;
             // 
             // picArticulo
             // 
-            this.picArticulo.Location = new System.Drawing.Point(724, 66);
-            this.picArticulo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.picArticulo.Location = new System.Drawing.Point(1034, 64);
+            this.picArticulo.Margin = new System.Windows.Forms.Padding(4);
             this.picArticulo.Name = "picArticulo";
-            this.picArticulo.Size = new System.Drawing.Size(268, 224);
+            this.picArticulo.Size = new System.Drawing.Size(309, 248);
             this.picArticulo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picArticulo.TabIndex = 5;
             this.picArticulo.TabStop = false;
@@ -99,7 +99,7 @@
             // btnBuscadorArticulo
             // 
             this.btnBuscadorArticulo.Location = new System.Drawing.Point(861, 16);
-            this.btnBuscadorArticulo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnBuscadorArticulo.Margin = new System.Windows.Forms.Padding(4);
             this.btnBuscadorArticulo.Name = "btnBuscadorArticulo";
             this.btnBuscadorArticulo.Size = new System.Drawing.Size(143, 39);
             this.btnBuscadorArticulo.TabIndex = 4;
@@ -109,7 +109,7 @@
             // btnEliminarArticulo
             // 
             this.btnEliminarArticulo.Location = new System.Drawing.Point(311, 16);
-            this.btnEliminarArticulo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEliminarArticulo.Margin = new System.Windows.Forms.Padding(4);
             this.btnEliminarArticulo.Name = "btnEliminarArticulo";
             this.btnEliminarArticulo.Size = new System.Drawing.Size(133, 39);
             this.btnEliminarArticulo.TabIndex = 3;
@@ -119,7 +119,7 @@
             // btnEditarArticulo
             // 
             this.btnEditarArticulo.Location = new System.Drawing.Point(167, 16);
-            this.btnEditarArticulo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEditarArticulo.Margin = new System.Windows.Forms.Padding(4);
             this.btnEditarArticulo.Name = "btnEditarArticulo";
             this.btnEditarArticulo.Size = new System.Drawing.Size(135, 39);
             this.btnEditarArticulo.TabIndex = 2;
@@ -130,7 +130,7 @@
             // 
             this.btnNuevoArticulo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnNuevoArticulo.Location = new System.Drawing.Point(8, 16);
-            this.btnNuevoArticulo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnNuevoArticulo.Margin = new System.Windows.Forms.Padding(4);
             this.btnNuevoArticulo.Name = "btnNuevoArticulo";
             this.btnNuevoArticulo.Size = new System.Drawing.Size(151, 39);
             this.btnNuevoArticulo.TabIndex = 1;
@@ -141,11 +141,12 @@
             // 
             this.dgvArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvArticulos.Location = new System.Drawing.Point(8, 64);
-            this.dgvArticulos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvArticulos.Margin = new System.Windows.Forms.Padding(4);
             this.dgvArticulos.Name = "dgvArticulos";
             this.dgvArticulos.RowHeadersWidth = 51;
-            this.dgvArticulos.Size = new System.Drawing.Size(689, 377);
+            this.dgvArticulos.Size = new System.Drawing.Size(996, 377);
             this.dgvArticulos.TabIndex = 0;
+            this.dgvArticulos.SelectionChanged += new System.EventHandler(this.dgvArticulos_SelectionChanged);
             // 
             // tabCatalagos
             // 
@@ -155,10 +156,10 @@
             this.tabCatalagos.Controls.Add(this.btnEditarCatalogo);
             this.tabCatalagos.Controls.Add(this.btNuevoCatalogo);
             this.tabCatalagos.Location = new System.Drawing.Point(4, 25);
-            this.tabCatalagos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabCatalagos.Margin = new System.Windows.Forms.Padding(4);
             this.tabCatalagos.Name = "tabCatalagos";
-            this.tabCatalagos.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tabCatalagos.Size = new System.Drawing.Size(1033, 437);
+            this.tabCatalagos.Padding = new System.Windows.Forms.Padding(4);
+            this.tabCatalagos.Size = new System.Drawing.Size(1425, 538);
             this.tabCatalagos.TabIndex = 1;
             this.tabCatalagos.Text = "Catalogos";
             this.tabCatalagos.UseVisualStyleBackColor = true;
@@ -167,7 +168,7 @@
             // 
             this.dgvCatalogos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCatalogos.Location = new System.Drawing.Point(18, 64);
-            this.dgvCatalogos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvCatalogos.Margin = new System.Windows.Forms.Padding(4);
             this.dgvCatalogos.Name = "dgvCatalogos";
             this.dgvCatalogos.RowHeadersWidth = 51;
             this.dgvCatalogos.Size = new System.Drawing.Size(993, 367);
@@ -176,7 +177,7 @@
             // btnEliminarCatalogo
             // 
             this.btnEliminarCatalogo.Location = new System.Drawing.Point(335, 16);
-            this.btnEliminarCatalogo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEliminarCatalogo.Margin = new System.Windows.Forms.Padding(4);
             this.btnEliminarCatalogo.Name = "btnEliminarCatalogo";
             this.btnEliminarCatalogo.Size = new System.Drawing.Size(151, 39);
             this.btnEliminarCatalogo.TabIndex = 2;
@@ -186,7 +187,7 @@
             // btnEditarCatalogo
             // 
             this.btnEditarCatalogo.Location = new System.Drawing.Point(177, 16);
-            this.btnEditarCatalogo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEditarCatalogo.Margin = new System.Windows.Forms.Padding(4);
             this.btnEditarCatalogo.Name = "btnEditarCatalogo";
             this.btnEditarCatalogo.Size = new System.Drawing.Size(151, 39);
             this.btnEditarCatalogo.TabIndex = 1;
@@ -196,7 +197,7 @@
             // btNuevoCatalogo
             // 
             this.btNuevoCatalogo.Location = new System.Drawing.Point(18, 16);
-            this.btNuevoCatalogo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btNuevoCatalogo.Margin = new System.Windows.Forms.Padding(4);
             this.btNuevoCatalogo.Name = "btNuevoCatalogo";
             this.btNuevoCatalogo.Size = new System.Drawing.Size(151, 39);
             this.btNuevoCatalogo.TabIndex = 0;
@@ -211,9 +212,9 @@
             this.tabMarcas.Controls.Add(this.btnNuevaMarca);
             this.tabMarcas.Controls.Add(this.dgvMarcas);
             this.tabMarcas.Location = new System.Drawing.Point(4, 25);
-            this.tabMarcas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabMarcas.Margin = new System.Windows.Forms.Padding(4);
             this.tabMarcas.Name = "tabMarcas";
-            this.tabMarcas.Size = new System.Drawing.Size(1033, 437);
+            this.tabMarcas.Size = new System.Drawing.Size(1425, 538);
             this.tabMarcas.TabIndex = 2;
             this.tabMarcas.Text = "Marcas";
             this.tabMarcas.UseVisualStyleBackColor = true;
@@ -221,7 +222,7 @@
             // btnEliminarMarca
             // 
             this.btnEliminarMarca.Location = new System.Drawing.Point(333, 14);
-            this.btnEliminarMarca.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEliminarMarca.Margin = new System.Windows.Forms.Padding(4);
             this.btnEliminarMarca.Name = "btnEliminarMarca";
             this.btnEliminarMarca.Size = new System.Drawing.Size(151, 39);
             this.btnEliminarMarca.TabIndex = 3;
@@ -231,7 +232,7 @@
             // btnEditarMarca
             // 
             this.btnEditarMarca.Location = new System.Drawing.Point(175, 14);
-            this.btnEditarMarca.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEditarMarca.Margin = new System.Windows.Forms.Padding(4);
             this.btnEditarMarca.Name = "btnEditarMarca";
             this.btnEditarMarca.Size = new System.Drawing.Size(151, 39);
             this.btnEditarMarca.TabIndex = 2;
@@ -241,7 +242,7 @@
             // btnNuevaMarca
             // 
             this.btnNuevaMarca.Location = new System.Drawing.Point(16, 14);
-            this.btnNuevaMarca.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnNuevaMarca.Margin = new System.Windows.Forms.Padding(4);
             this.btnNuevaMarca.Name = "btnNuevaMarca";
             this.btnNuevaMarca.Size = new System.Drawing.Size(151, 39);
             this.btnNuevaMarca.TabIndex = 1;
@@ -252,7 +253,7 @@
             // 
             this.dgvMarcas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvMarcas.Location = new System.Drawing.Point(16, 64);
-            this.dgvMarcas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvMarcas.Margin = new System.Windows.Forms.Padding(4);
             this.dgvMarcas.Name = "dgvMarcas";
             this.dgvMarcas.RowHeadersWidth = 51;
             this.dgvMarcas.Size = new System.Drawing.Size(993, 367);
@@ -262,11 +263,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1061, 506);
+            this.ClientSize = new System.Drawing.Size(1462, 595);
             this.Controls.Add(this.tabControl);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "mainForm";
             this.Text = "TP-WinForm";
+            this.Load += new System.EventHandler(this.mainForm_Load);
             this.tabControl.ResumeLayout(false);
             this.tabArticulos.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picArticulo)).EndInit();
