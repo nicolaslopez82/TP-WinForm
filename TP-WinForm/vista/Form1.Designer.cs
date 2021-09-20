@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.tabControl = new System.Windows.Forms.TabControl();
             this.tabArticulos = new System.Windows.Forms.TabPage();
             this.picArticulo = new System.Windows.Forms.PictureBox();
@@ -36,8 +37,7 @@
             this.btnEditarArticulo = new System.Windows.Forms.Button();
             this.btnNuevoArticulo = new System.Windows.Forms.Button();
             this.dgvArticulos = new System.Windows.Forms.DataGridView();
-            this.tabCatalagos = new System.Windows.Forms.TabPage();
-            this.dgvCatalogos = new System.Windows.Forms.DataGridView();
+            this.tabBusqueda = new System.Windows.Forms.TabPage();
             this.btnEliminarCatalogo = new System.Windows.Forms.Button();
             this.btnEditarCatalogo = new System.Windows.Forms.Button();
             this.btNuevoCatalogo = new System.Windows.Forms.Button();
@@ -46,20 +46,38 @@
             this.btnEditarMarca = new System.Windows.Forms.Button();
             this.btnNuevaMarca = new System.Windows.Forms.Button();
             this.dgvMarcas = new System.Windows.Forms.DataGridView();
+            this.viewListarArticulosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.adgvBusquedaArticulos = new Zuby.ADGV.AdvancedDataGridView();
+            this.cATALOGO_DBDataSet = new vista.CATALOGO_DBDataSet();
+            this.viewListarArticulosBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.viewListarArticulosTableAdapter = new vista.CATALOGO_DBDataSetTableAdapters.ViewListarArticulosTableAdapter();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codigoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descripcionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.imagenUrlDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.desmarDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idmarDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idcatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl.SuspendLayout();
             this.tabArticulos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picArticulo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).BeginInit();
-            this.tabCatalagos.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCatalogos)).BeginInit();
+            this.tabBusqueda.SuspendLayout();
             this.tabMarcas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMarcas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.viewListarArticulosBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.adgvBusquedaArticulos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cATALOGO_DBDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.viewListarArticulosBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl
             // 
             this.tabControl.Controls.Add(this.tabArticulos);
-            this.tabControl.Controls.Add(this.tabCatalagos);
+            this.tabControl.Controls.Add(this.tabBusqueda);
             this.tabControl.Controls.Add(this.tabMarcas);
             this.tabControl.Location = new System.Drawing.Point(16, 15);
             this.tabControl.Margin = new System.Windows.Forms.Padding(4);
@@ -152,31 +170,21 @@
             this.dgvArticulos.TabIndex = 0;
             this.dgvArticulos.SelectionChanged += new System.EventHandler(this.dgvArticulos_SelectionChanged);
             // 
-            // tabCatalagos
+            // tabBusqueda
             // 
-            this.tabCatalagos.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.tabCatalagos.Controls.Add(this.dgvCatalogos);
-            this.tabCatalagos.Controls.Add(this.btnEliminarCatalogo);
-            this.tabCatalagos.Controls.Add(this.btnEditarCatalogo);
-            this.tabCatalagos.Controls.Add(this.btNuevoCatalogo);
-            this.tabCatalagos.Location = new System.Drawing.Point(4, 25);
-            this.tabCatalagos.Margin = new System.Windows.Forms.Padding(4);
-            this.tabCatalagos.Name = "tabCatalagos";
-            this.tabCatalagos.Padding = new System.Windows.Forms.Padding(4);
-            this.tabCatalagos.Size = new System.Drawing.Size(1425, 538);
-            this.tabCatalagos.TabIndex = 1;
-            this.tabCatalagos.Text = "Catalogos";
-            this.tabCatalagos.UseVisualStyleBackColor = true;
-            // 
-            // dgvCatalogos
-            // 
-            this.dgvCatalogos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCatalogos.Location = new System.Drawing.Point(18, 64);
-            this.dgvCatalogos.Margin = new System.Windows.Forms.Padding(4);
-            this.dgvCatalogos.Name = "dgvCatalogos";
-            this.dgvCatalogos.RowHeadersWidth = 51;
-            this.dgvCatalogos.Size = new System.Drawing.Size(993, 367);
-            this.dgvCatalogos.TabIndex = 3;
+            this.tabBusqueda.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.tabBusqueda.Controls.Add(this.adgvBusquedaArticulos);
+            this.tabBusqueda.Controls.Add(this.btnEliminarCatalogo);
+            this.tabBusqueda.Controls.Add(this.btnEditarCatalogo);
+            this.tabBusqueda.Controls.Add(this.btNuevoCatalogo);
+            this.tabBusqueda.Location = new System.Drawing.Point(4, 25);
+            this.tabBusqueda.Margin = new System.Windows.Forms.Padding(4);
+            this.tabBusqueda.Name = "tabBusqueda";
+            this.tabBusqueda.Padding = new System.Windows.Forms.Padding(4);
+            this.tabBusqueda.Size = new System.Drawing.Size(1425, 538);
+            this.tabBusqueda.TabIndex = 1;
+            this.tabBusqueda.Text = "Busqueda";
+            this.tabBusqueda.UseVisualStyleBackColor = true;
             // 
             // btnEliminarCatalogo
             // 
@@ -263,6 +271,139 @@
             this.dgvMarcas.Size = new System.Drawing.Size(993, 367);
             this.dgvMarcas.TabIndex = 0;
             // 
+            // viewListarArticulosBindingSource
+            // 
+            this.viewListarArticulosBindingSource.DataMember = "ViewListarArticulos";
+            // 
+            // adgvBusquedaArticulos
+            // 
+            this.adgvBusquedaArticulos.AutoGenerateColumns = false;
+            this.adgvBusquedaArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.adgvBusquedaArticulos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idDataGridViewTextBoxColumn,
+            this.codigoDataGridViewTextBoxColumn,
+            this.nombreDataGridViewTextBoxColumn,
+            this.descripcionDataGridViewTextBoxColumn,
+            this.imagenUrlDataGridViewTextBoxColumn,
+            this.desmarDataGridViewTextBoxColumn,
+            this.idmarDataGridViewTextBoxColumn,
+            this.descatDataGridViewTextBoxColumn,
+            this.idcatDataGridViewTextBoxColumn,
+            this.precioDataGridViewTextBoxColumn});
+            this.adgvBusquedaArticulos.DataSource = this.viewListarArticulosBindingSource1;
+            this.adgvBusquedaArticulos.FilterAndSortEnabled = true;
+            this.adgvBusquedaArticulos.Location = new System.Drawing.Point(18, 63);
+            this.adgvBusquedaArticulos.Name = "adgvBusquedaArticulos";
+            this.adgvBusquedaArticulos.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.adgvBusquedaArticulos.RowHeadersWidth = 51;
+            this.adgvBusquedaArticulos.RowTemplate.Height = 24;
+            this.adgvBusquedaArticulos.Size = new System.Drawing.Size(1040, 380);
+            this.adgvBusquedaArticulos.TabIndex = 3;
+            // 
+            // cATALOGO_DBDataSet
+            // 
+            this.cATALOGO_DBDataSet.DataSetName = "CATALOGO_DBDataSet";
+            this.cATALOGO_DBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // viewListarArticulosBindingSource1
+            // 
+            this.viewListarArticulosBindingSource1.DataMember = "ViewListarArticulos";
+            this.viewListarArticulosBindingSource1.DataSource = this.cATALOGO_DBDataSet;
+            // 
+            // viewListarArticulosTableAdapter
+            // 
+            this.viewListarArticulosTableAdapter.ClearBeforeFill = true;
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn.MinimumWidth = 22;
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            this.idDataGridViewTextBoxColumn.Width = 55;
+            // 
+            // codigoDataGridViewTextBoxColumn
+            // 
+            this.codigoDataGridViewTextBoxColumn.DataPropertyName = "Codigo";
+            this.codigoDataGridViewTextBoxColumn.HeaderText = "Codigo";
+            this.codigoDataGridViewTextBoxColumn.MinimumWidth = 22;
+            this.codigoDataGridViewTextBoxColumn.Name = "codigoDataGridViewTextBoxColumn";
+            this.codigoDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // nombreDataGridViewTextBoxColumn
+            // 
+            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "Nombre";
+            this.nombreDataGridViewTextBoxColumn.HeaderText = "Nombre";
+            this.nombreDataGridViewTextBoxColumn.MinimumWidth = 22;
+            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
+            this.nombreDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            this.nombreDataGridViewTextBoxColumn.Width = 120;
+            // 
+            // descripcionDataGridViewTextBoxColumn
+            // 
+            this.descripcionDataGridViewTextBoxColumn.DataPropertyName = "Descripcion";
+            this.descripcionDataGridViewTextBoxColumn.HeaderText = "Descripcion";
+            this.descripcionDataGridViewTextBoxColumn.MinimumWidth = 22;
+            this.descripcionDataGridViewTextBoxColumn.Name = "descripcionDataGridViewTextBoxColumn";
+            this.descripcionDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            this.descripcionDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // imagenUrlDataGridViewTextBoxColumn
+            // 
+            this.imagenUrlDataGridViewTextBoxColumn.DataPropertyName = "ImagenUrl";
+            this.imagenUrlDataGridViewTextBoxColumn.HeaderText = "ImagenUrl";
+            this.imagenUrlDataGridViewTextBoxColumn.MinimumWidth = 22;
+            this.imagenUrlDataGridViewTextBoxColumn.Name = "imagenUrlDataGridViewTextBoxColumn";
+            this.imagenUrlDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            this.imagenUrlDataGridViewTextBoxColumn.Visible = false;
+            this.imagenUrlDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // desmarDataGridViewTextBoxColumn
+            // 
+            this.desmarDataGridViewTextBoxColumn.DataPropertyName = "Desmar";
+            this.desmarDataGridViewTextBoxColumn.HeaderText = "Marca";
+            this.desmarDataGridViewTextBoxColumn.MinimumWidth = 22;
+            this.desmarDataGridViewTextBoxColumn.Name = "desmarDataGridViewTextBoxColumn";
+            this.desmarDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // idmarDataGridViewTextBoxColumn
+            // 
+            this.idmarDataGridViewTextBoxColumn.DataPropertyName = "Idmar";
+            this.idmarDataGridViewTextBoxColumn.HeaderText = "Idmar";
+            this.idmarDataGridViewTextBoxColumn.MinimumWidth = 22;
+            this.idmarDataGridViewTextBoxColumn.Name = "idmarDataGridViewTextBoxColumn";
+            this.idmarDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            this.idmarDataGridViewTextBoxColumn.Visible = false;
+            this.idmarDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // descatDataGridViewTextBoxColumn
+            // 
+            this.descatDataGridViewTextBoxColumn.DataPropertyName = "Descat";
+            this.descatDataGridViewTextBoxColumn.HeaderText = "Categorias";
+            this.descatDataGridViewTextBoxColumn.MinimumWidth = 22;
+            this.descatDataGridViewTextBoxColumn.Name = "descatDataGridViewTextBoxColumn";
+            this.descatDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // idcatDataGridViewTextBoxColumn
+            // 
+            this.idcatDataGridViewTextBoxColumn.DataPropertyName = "Idcat";
+            this.idcatDataGridViewTextBoxColumn.HeaderText = "Idcat";
+            this.idcatDataGridViewTextBoxColumn.MinimumWidth = 22;
+            this.idcatDataGridViewTextBoxColumn.Name = "idcatDataGridViewTextBoxColumn";
+            this.idcatDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            this.idcatDataGridViewTextBoxColumn.Visible = false;
+            this.idcatDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // precioDataGridViewTextBoxColumn
+            // 
+            this.precioDataGridViewTextBoxColumn.DataPropertyName = "Precio";
+            this.precioDataGridViewTextBoxColumn.HeaderText = "Precio";
+            this.precioDataGridViewTextBoxColumn.MinimumWidth = 22;
+            this.precioDataGridViewTextBoxColumn.Name = "precioDataGridViewTextBoxColumn";
+            this.precioDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            this.precioDataGridViewTextBoxColumn.Width = 125;
+            // 
             // mainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -277,10 +418,13 @@
             this.tabArticulos.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picArticulo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).EndInit();
-            this.tabCatalagos.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCatalogos)).EndInit();
+            this.tabBusqueda.ResumeLayout(false);
             this.tabMarcas.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvMarcas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.viewListarArticulosBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.adgvBusquedaArticulos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cATALOGO_DBDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.viewListarArticulosBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -295,8 +439,7 @@
         private System.Windows.Forms.Button btnEditarArticulo;
         private System.Windows.Forms.Button btnNuevoArticulo;
         private System.Windows.Forms.DataGridView dgvArticulos;
-        private System.Windows.Forms.TabPage tabCatalagos;
-        private System.Windows.Forms.DataGridView dgvCatalogos;
+        private System.Windows.Forms.TabPage tabBusqueda;
         private System.Windows.Forms.Button btnEliminarCatalogo;
         private System.Windows.Forms.Button btnEditarCatalogo;
         private System.Windows.Forms.Button btNuevoCatalogo;
@@ -304,7 +447,22 @@
         private System.Windows.Forms.Button btnEliminarMarca;
         private System.Windows.Forms.Button btnEditarMarca;
         private System.Windows.Forms.Button btnNuevaMarca;
-        private System.Windows.Forms.DataGridView dgvMarcas;
+        private System.Windows.Forms.DataGridView dgvMarcas;   
+        private System.Windows.Forms.BindingSource viewListarArticulosBindingSource;
+        private Zuby.ADGV.AdvancedDataGridView adgvBusquedaArticulos;
+        private CATALOGO_DBDataSet cATALOGO_DBDataSet;
+        private System.Windows.Forms.BindingSource viewListarArticulosBindingSource1;
+        private CATALOGO_DBDataSetTableAdapters.ViewListarArticulosTableAdapter viewListarArticulosTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn codigoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descripcionDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn imagenUrlDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn desmarDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idmarDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descatDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idcatDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn precioDataGridViewTextBoxColumn;
     }
 }
 
