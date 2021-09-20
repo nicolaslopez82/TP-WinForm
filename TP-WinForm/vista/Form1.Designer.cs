@@ -125,6 +125,7 @@
             this.btnEditarArticulo.TabIndex = 2;
             this.btnEditarArticulo.Text = "Editar Articulo";
             this.btnEditarArticulo.UseVisualStyleBackColor = true;
+            this.btnEditarArticulo.Click += new System.EventHandler(this.btnEditarArticulo_Click);
             // 
             // btnNuevoArticulo
             // 

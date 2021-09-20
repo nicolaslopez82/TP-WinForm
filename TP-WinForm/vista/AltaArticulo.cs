@@ -19,6 +19,11 @@ namespace vista
         {
             InitializeComponent();
         }
+        public AltaArticulo(Articulo Articulo)
+        {
+            this.Art = Articulo;
+            InitializeComponent();
+        }
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
@@ -38,7 +43,8 @@ namespace vista
                 Art.Precio = decimal.Parse(txtPrecio.Text);
                 if (Art.Id != 0)
                 {
-
+                    negocio.modificar(Art);
+                    MessageBox.Show("Modificado exitosamente");
                 }
                 else
                 {
@@ -50,7 +56,6 @@ namespace vista
             }
             catch (Exception ex)
             {
-
                 MessageBox.Show(ex.ToString());
             }
 
@@ -77,12 +82,11 @@ namespace vista
                     txtUrlImagen.Text = Art.Imagen;
                     cboMarca.SelectedValue = Art.Marca.Id;
                     cboCategoria.SelectedValue = Art.Categoria.Id;
-
+                    txtPrecio.Text = Art.Precio.ToString();
                 }
             }
             catch (Exception ex)
             {
-
                 MessageBox.Show(ex.ToString());
             }
         }

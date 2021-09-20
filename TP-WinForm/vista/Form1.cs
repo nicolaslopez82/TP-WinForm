@@ -67,5 +67,13 @@ namespace vista
             alta.ShowDialog();
             cargar();
         }
+
+        private void btnEditarArticulo_Click(object sender, EventArgs e)
+        {
+            Articulo seleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
+            AltaArticulo modificacion = new AltaArticulo(seleccionado);
+            modificacion.ShowDialog();
+            cargar();
+        }
     }
 }
