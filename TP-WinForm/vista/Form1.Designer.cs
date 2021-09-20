@@ -115,6 +115,7 @@
             this.btnEliminarArticulo.TabIndex = 3;
             this.btnEliminarArticulo.Text = "Eliminar Articulo ";
             this.btnEliminarArticulo.UseVisualStyleBackColor = true;
+            this.btnEliminarArticulo.Click += new System.EventHandler(this.btnEliminarArticulo_Click);
             // 
             // btnEditarArticulo
             // 
@@ -146,6 +147,7 @@
             this.dgvArticulos.Margin = new System.Windows.Forms.Padding(4);
             this.dgvArticulos.Name = "dgvArticulos";
             this.dgvArticulos.RowHeadersWidth = 51;
+            this.dgvArticulos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvArticulos.Size = new System.Drawing.Size(1004, 377);
             this.dgvArticulos.TabIndex = 0;
             this.dgvArticulos.SelectionChanged += new System.EventHandler(this.dgvArticulos_SelectionChanged);
