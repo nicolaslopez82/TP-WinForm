@@ -95,5 +95,6 @@ namespace vista
         {
             this.Close();
         }
+
     }
 }

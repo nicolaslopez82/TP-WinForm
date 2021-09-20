@@ -15,7 +15,8 @@ namespace vista
 {
     public partial class mainForm : Form
     {
-        private List<Articulo> listArticulos;
+        public List<Articulo> listArticulos;
+        
         public mainForm()
         {
             InitializeComponent();
@@ -29,6 +30,7 @@ namespace vista
         private void cargar()
         {
             ArticuloNegocio negocio = new ArticuloNegocio();
+        
             try
             {
                 listArticulos = negocio.listar();
@@ -43,7 +45,8 @@ namespace vista
             }
         }
 
-        private void cargarImagen(string imagen)
+
+        public void cargarImagen(string imagen)
         {
             try
             {
@@ -91,6 +94,30 @@ namespace vista
                 MessageBox.Show("Articulo No Eliminado", "Eliminar Articulo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             cargar();
+        }
+
+        private void btnBuscadorArticulo_Click(object sender, EventArgs e)
+        {
+            BusquedaArticulo busquedaArticulo = new BusquedaArticulo();
+            busquedaArticulo.ShowDialog();
+        }
+
+        private void dgvArticulos_DataSourceChanged(object sender, EventArgs e)
+        {
+            BusquedaNegocio busquedaNegocio = new BusquedaNegocio();
+     
+            try
+            {
+                /*listArticulos = busquedaNegocio.BuscarArticulos(ConstantesDB.SQL_QUERY_BUSCAR_ARTICULOS.Value, "A23");
+                dgvArticulos.DataSource = listArticulos;*/
+                dgvArticulos.Columns["Imagen"].Visible = false;
+                cargarImagen(listArticulos[0].Imagen);
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
     }
 }

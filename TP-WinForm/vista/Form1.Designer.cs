@@ -105,6 +105,7 @@
             this.btnBuscadorArticulo.TabIndex = 4;
             this.btnBuscadorArticulo.Text = "Buscar Articulo";
             this.btnBuscadorArticulo.UseVisualStyleBackColor = true;
+            this.btnBuscadorArticulo.Click += new System.EventHandler(this.btnBuscadorArticulo_Click);
             // 
             // btnEliminarArticulo
             // 
@@ -150,6 +151,7 @@
             this.dgvArticulos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvArticulos.Size = new System.Drawing.Size(1004, 377);
             this.dgvArticulos.TabIndex = 0;
+            this.dgvArticulos.DataSourceChanged += new System.EventHandler(this.dgvArticulos_DataSourceChanged);
             this.dgvArticulos.SelectionChanged += new System.EventHandler(this.dgvArticulos_SelectionChanged);
             // 
             // tabCatalagos
@@ -294,7 +296,7 @@
         private System.Windows.Forms.Button btnEliminarArticulo;
         private System.Windows.Forms.Button btnEditarArticulo;
         private System.Windows.Forms.Button btnNuevoArticulo;
-        private System.Windows.Forms.DataGridView dgvArticulos;
+        public System.Windows.Forms.DataGridView dgvArticulos;
         private System.Windows.Forms.TabPage tabCatalagos;
         private System.Windows.Forms.DataGridView dgvCatalogos;
         private System.Windows.Forms.Button btnEliminarCatalogo;
