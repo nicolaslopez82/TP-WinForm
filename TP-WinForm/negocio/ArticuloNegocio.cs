@@ -75,5 +75,31 @@ namespace negocio
                 AccesoDatos.cerrarConexion();
             }
         }
+
+        public void modificar(Articulo modificar)
+        {
+            AccesoDatos.setearconsulta(ConstantesDB.SQL_QUERY_MODIFICAR_ARTICULOS.Value);
+
+            try
+            {
+                AccesoDatos.setearParametro("@Id", modificar.Id);
+                AccesoDatos.setearParametro("@Codigo", modificar.Codigo);
+                AccesoDatos.setearParametro("@Nombre", modificar.Nombre);
+                AccesoDatos.setearParametro("@Descripcion", modificar.Descripcion);
+                AccesoDatos.setearParametro("@IdMarca", modificar.Marca.Id);
+                AccesoDatos.setearParametro("@IdCategoria", modificar.Categoria.Id);
+                AccesoDatos.setearParametro("@ImagenUrl", modificar.Imagen);
+                AccesoDatos.setearParametro("@Precio", modificar.Precio);
+                AccesoDatos.ejecturarAccion();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                AccesoDatos.cerrarConexion();
+            }
+        }
     }
 }
