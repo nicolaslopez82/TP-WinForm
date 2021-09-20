@@ -78,7 +78,7 @@ namespace negocio
 
         public void modificar(Articulo modificar)
         {
-            AccesoDatos.setearconsulta(ConstantesDB.SQL_QUERY_MODIFICAR_ARTICULOS.Value);
+            AccesoDatos.setearconsulta(ConstantesDB.SQL_QUERY_MODIFICAR_ARTICULO.Value);
 
             try
             {
@@ -90,6 +90,32 @@ namespace negocio
                 AccesoDatos.setearParametro("@IdCategoria", modificar.Categoria.Id);
                 AccesoDatos.setearParametro("@ImagenUrl", modificar.Imagen);
                 AccesoDatos.setearParametro("@Precio", modificar.Precio);
+                AccesoDatos.ejecturarAccion();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                AccesoDatos.cerrarConexion();
+            }
+        }
+
+        public void Eliminar(Articulo eliminar)
+        {
+            AccesoDatos.setearconsulta(ConstantesDB.SQL_QUERY_ELIMINAR_ARTICULO.Value);
+
+            try
+            {
+                AccesoDatos.setearParametro("@Id", eliminar.Id);
+               /* AccesoDatos.setearParametro("@Codigo", eliminar.Codigo);
+                AccesoDatos.setearParametro("@Nombre", eliminar.Nombre);
+                AccesoDatos.setearParametro("@Descripcion", eliminar.Descripcion);
+                AccesoDatos.setearParametro("@IdMarca", eliminar.Marca.Id);
+                AccesoDatos.setearParametro("@IdCategoria", eliminar.Categoria.Id);
+                AccesoDatos.setearParametro("@ImagenUrl", eliminar.Imagen);
+                AccesoDatos.setearParametro("@Precio", eliminar.Precio);*/
                 AccesoDatos.ejecturarAccion();
             }
             catch (Exception ex)

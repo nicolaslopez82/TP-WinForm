@@ -75,5 +75,22 @@ namespace vista
             modificacion.ShowDialog();
             cargar();
         }
+
+        private void btnEliminarArticulo_Click(object sender, EventArgs e)
+        {
+             Articulo seleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;                       
+
+            if (MessageBox.Show("Desea eliminar el articulo seleccionado?", "Eliminar Articulo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                ArticuloNegocio negocio = new ArticuloNegocio();
+                negocio.Eliminar(seleccionado);
+                MessageBox.Show("Articulo Eliminado", "Eliminar Articulo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("Articulo No Eliminado", "Eliminar Articulo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            cargar();
+        }
     }
 }
