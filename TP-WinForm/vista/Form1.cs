@@ -98,9 +98,19 @@ namespace vista
             cargar();
         }
 
-        private void aRTICULOSBindingSource_CurrentChanged(object sender, EventArgs e)
+        private void adgvBusquedaArticulos_SortStringChanged(object sender, Zuby.ADGV.AdvancedDataGridView.SortEventArgs e)
         {
+            this.viewListarArticulosBindingSource.Sort = this.adgvBusquedaArticulos.SortString;
+        }
 
+        private void adgvBusquedaArticulos_FilterStringChanged(object sender, Zuby.ADGV.AdvancedDataGridView.FilterEventArgs e)
+        {
+            this.viewListarArticulosBindingSource.Filter = this.adgvBusquedaArticulos.FilterString;
+        }
+
+        private void btnBuscadorArticulo_Click(object sender, EventArgs e)
+        {
+            this.tabControl.SelectTab("tabBusqueda");
         }
     }
 }
